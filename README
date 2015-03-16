@@ -5,8 +5,9 @@ as input an image or image file and outputs a string.
 
 PyTesser uses the Tesseract OCR engine (an Open Source project at Google), 
 converting images to an accepted format and calling the Tesseract 
-executable as an external script. A Windows executable is provided 
-along with the Python scripts. The scripts should work in Linux as well. 
+executable as an external script. 
+
+A modification is made for this application to run on Mac instead of just windows
 
 PyTesser:
 http://code.google.com/p/pytesser/
@@ -16,14 +17,24 @@ http://code.google.com/p/tesseract-ocr/
 
 Dependencies:
 =============
-PIL is required to work with images in memory. PyTesser has been tested with Python 2.4 in Windows XP. 
-http://www.pythonware.com/products/pil/
+Pillow is required to work with images in memory. PyTesser has been tested with Python 2.7 in OSx. 
+https://github.com/python-pillow/Pillow/blob/master/docs/index.rst
 
 
 Installation:
 ==============
-PyTesser has no installation functionality in this release.  Extract pytesser.zip
-into directory with other scripts.  Necessary files are listed in Dependencies below.  
+1. compile tesseract - https://code.google.com/p/tesseract-ocr/wiki/Compiling
+  
+    brew install tesseract
+    
+1. (optional) - use virtualenv / virtualenvwrapper to create new environment
+    
+    mkvirtualenv pytesseract
+    
+1. install python dependencies
+
+    pip install -r requirements.pip
+    
 
 
 Usage:
